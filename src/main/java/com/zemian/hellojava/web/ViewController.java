@@ -15,7 +15,7 @@ import static org.slf4j.LoggerFactory.getLogger;
  * A direct simple controller to forward URL to a view without providing any data model.
  * Note that we can map multiple simple URL path here for the entire application.
  */
-@WebServlet("/about")
+@WebServlet({"/about", "/hello", "/error"})
 public class ViewController extends HttpServlet {
     private static final Logger LOG = getLogger(ViewController.class);
 
