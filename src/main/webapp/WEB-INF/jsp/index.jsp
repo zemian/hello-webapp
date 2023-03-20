@@ -10,5 +10,5 @@
     <%@include file="/WEB-INF/jsp/includes/footer.jsp"%>
 </div>
 
-<%@include file="/WEB-INF/jsp/includes/html-tail.jsp"%>
+<%--<%@include file="/WEB-INF/jsp/includes/html-tail.jsp"%>--%>
 </html>

@@ -39,7 +39,6 @@ public class ClassFinderController extends HttpServlet {
 
         AppManager app = AppManager.getInstance();
         String viewName = app.getViewResolver().resolveViewName(req);
-        LOG.trace("Using viewName={}", viewName);
         req.getRequestDispatcher(viewName).forward(req, resp);
     }
 }
