@@ -24,7 +24,7 @@ public class DebugController extends HttpServlet {
         String contextPath = req.getContextPath();
         String name = req.getRequestURI();
         LOG.debug("Using contextPath={}, name={}", contextPath, name);
-        String viewName = app.getViewResolver().resolveViewName("debug");
+        String viewName = app.getViewResolver().resolveViewName(req);
         LOG.debug("Using viewName={}", name, viewName);
         req.getRequestDispatcher(viewName).forward(req, resp);
     }

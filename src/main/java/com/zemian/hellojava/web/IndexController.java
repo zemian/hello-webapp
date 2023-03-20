@@ -16,7 +16,7 @@ public class IndexController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         AppManager app = AppManager.getInstance();
-        String viewName = app.getViewResolver().resolveViewName("index");
+        String viewName = app.getViewResolver().resolveViewName(req);
         req.getRequestDispatcher(viewName).forward(req, resp);
     }
 }

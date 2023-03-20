@@ -38,7 +38,7 @@ public class SystemInfoController extends HttpServlet {
         }
         req.setAttribute("sysInfo", sysInfo);
 
-        String viewName = app.getViewResolver().resolveViewName("system-info");
+        String viewName = app.getViewResolver().resolveViewName(req);
         req.getRequestDispatcher(viewName).forward(req, resp);
     }
 }

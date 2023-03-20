@@ -22,13 +22,7 @@ public class ViewController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         AppManager app = AppManager.getInstance();
-        String contextPath = req.getContextPath();
-        String name = req.getRequestURI();
-        // Strip contextPath if found
-        if (name.startsWith(contextPath)) {
-            name = name.substring(contextPath.length());
-        }
-        String viewName = app.getViewResolver().resolveViewName(name);
+        String viewName = app.getViewResolver().resolveViewName(req);
         LOG.trace("Using viewName={}", viewName);
         req.getRequestDispatcher(viewName).forward(req, resp);
     }
