@@ -17,7 +17,7 @@ public class ViewResolver {
             name = "/" + name;
         }
         String view = viewNamePrefix + name + viewNameSuffix;
-        LOG.debug("Resolving view={}", view);
+        LOG.debug("Resolving name={} to view={}", name, view);
         return view;
     }
 }

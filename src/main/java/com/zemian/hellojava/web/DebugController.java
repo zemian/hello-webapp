@@ -21,8 +21,9 @@ public class DebugController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         AppManager app = AppManager.getInstance();
+        String contextPath = req.getContextPath();
         String name = req.getRequestURI();
-        LOG.debug("Using name={}", name);
+        LOG.debug("Using contextPath={}, name={}", contextPath, name);
         String viewName = app.getViewResolver().resolveViewName("debug");
         LOG.debug("Using viewName={}", name, viewName);
         req.getRequestDispatcher(viewName).forward(req, resp);
