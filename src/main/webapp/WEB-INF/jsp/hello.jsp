@@ -4,8 +4,8 @@
 <%@include file="/WEB-INF/jsp/includes/html-head.jsp"%>
 <%@include file="/WEB-INF/jsp/includes/header.jsp"%>
 
-<div class="container">
-    <div class="main-content">
+<div class="section">
+    <div class="container">
         <%
             // This is just a test page for app health
             AppManager app = AppManager.getInstance();

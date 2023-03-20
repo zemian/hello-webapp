@@ -1,13 +1,24 @@
-<nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="${app.contextPath}/">HelloApp</a>
+<!DOCTYPE html>
+<html>
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="${app.contextPath}/">
+            HelloApp
+        </a>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+    <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+            <a class="navbar-item" href="${app.contextPath}/system-info">
+                SystemInfo
+            </a>
+            <a class="navbar-item" href="${app.contextPath}/about">
+                About
+            </a>
         </div>
-        <div id="navbar" class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-                <li id="system-info"><a href="${app.contextPath}/system-info">SystemInfo</a></li>
-                <li id="about"><a href="${app.contextPath}/about">About</a></li>
-            </ul>
-        </div><!--/.nav-collapse -->
     </div>
 </nav>

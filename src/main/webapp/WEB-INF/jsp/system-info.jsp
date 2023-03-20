@@ -4,9 +4,9 @@
 <%@include file="/WEB-INF/jsp/includes/html-head.jsp"%>
 <%@include file="/WEB-INF/jsp/includes/header.jsp"%>
 
-<div class="container">
-    <div class="main-content">
-        <h1>System Information</h1>
+<div class="section">
+    <div class="container">
+        <h1 class="title">System Information</h1>
         <table class="table">
             <c:forEach var="entry" items="${sysInfo}">
                 <tr><td>${entry.key}</td><td>${entry.value}</td></tr>
